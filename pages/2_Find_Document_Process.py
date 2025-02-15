@@ -1,6 +1,9 @@
 import streamlit as st
 
 
+st.set_page_config(page_title="Find Document Process", page_icon= r"styles\seal_logo.png", initial_sidebar_state="auto")
+
+
 process = st.selectbox(
         "Choose the Process",
         ('Select a Document Process','NIE Renewal', 'Authorization to Return', 'City Hall Registration')
@@ -46,3 +49,37 @@ elif process == 'City Hall Registration':
 else:
         "Please select a Valid process"
 
+
+
+
+### Live Chat Icon
+
+# Inject custom CSS & HTML for a floating chat icon
+st.markdown(
+    """
+    <style>
+        .chat-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #7B84CD; 
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 30px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+        }
+        .chat-button:hover {
+            background-color: #6CE2D6;
+        }
+    </style>
+    <button class="chat-button" onclick="alert('Live chat is coming soon!')">💬</button>
+    """,
+    unsafe_allow_html=True
+)

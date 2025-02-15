@@ -22,12 +22,16 @@ st.text("""
 
         🔒 Why SEAL?
 
-        Save Hours of tedious data entry.s
+        Save Hours of tedious data entry.
         Reduce Errors in official documents.
         Protect Your Data with blockchain security.
         Simplify University & Visa Forms effortlessly.
         🚀 Transform the way you handle personal data – with SEAL!'        
         """)
+
+
+
+
 
 ## Tabs
 
