@@ -1,8 +1,5 @@
 import json
 import os
-from pypdf import PdfReader, PdfWriter
-from pypdf.generic import NameObject
-import fitz  # PyMuPDF
 import streamlit as st
 
 st.set_page_config(page_title="Upload a Document", page_icon= r"styles\seal_logo.png", initial_sidebar_state="auto")
