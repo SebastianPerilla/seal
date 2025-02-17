@@ -2,7 +2,7 @@ import json
 import os
 import streamlit as st
 
-st.set_page_config(page_title="Upload a Document", page_icon= r"styles\seal_logo.png", initial_sidebar_state="auto")
+st.set_page_config(page_title="Upload a Document", page_icon= "./styles/seal_logo.png", initial_sidebar_state="auto")
 
 st.markdown(
     """
