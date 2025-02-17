@@ -8,7 +8,7 @@ st.set_page_config(page_title="Home", page_icon= r"styles\seal_logo.png", initia
 
 
 # Display image with full width
-st.image(r"styles\dashboard.png", use_container_width=True)
+st.image(r"/styles/dashboard.png", use_container_width=True)
 
 ## Tabs
 
