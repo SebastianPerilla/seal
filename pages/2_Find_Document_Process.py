@@ -4,6 +4,10 @@ import streamlit as st
 st.set_page_config(page_title="Find Document Process", page_icon= r"styles\seal_logo.png", initial_sidebar_state="auto")
 
 
+health_insurance_form = 0
+check = '✅'
+need = "🟧"
+
 process = st.selectbox(
         "Choose the Process",
         ('Select a Document Process','NIE Renewal', 'Authorization to Return', 'City Hall Registration')
@@ -17,31 +21,60 @@ if process == "Select a Document Process":
                  - City Hall Registration
                  """)
         
-elif process == 'NIE Renewal':
-        st.write("""
-                    This Process requires the following documents:
-                    
-                    SEAL has compiled the following documents for you to download:
-                    
-                    - ✅ Copy of Passport  
-                    - ✅ Copy of Residence Permit (NIE/TIE)  
-                    - ✅ EX-00 Form  
-                    - ✅ Tax Form (Tasa-052)  
-                    - ✅ Certificado de Aprovechamiento  
-                    - ✅ Academic Transcript  
-                    - 🟧 Health Insurance Form  (Upload Here)
-                    - ✅ Copy of Health Insurance Card  
-                    - ❌ Bank Statements  
+elif process == 'NIE Renewal' and health_insurance_form == 0:
+        
+        health_insurance_form = 0  # Initial condition
+        need = "🟧"  # Initial state indicating missing document
+        
+        if health_insurance_form == 0:
+                
+                st.warning("Please upload the Health Insurance Form to proceed.")
 
-                    **YOU NEED TO GET THE BANK STATEMENTS**
+                uploaded_file = st.file_uploader(" ", type=['pdf'])
+
+                # Update the `need` variable if a file is uploaded
+                if uploaded_file:
+                        health_insurance_form = 1
+                        need = "✅"
+                        st.success("Health Insurance Form uploaded successfully!")
+
+        st.markdown("<br>", unsafe_allow_html=True) 
+
+        # Display the document checklist dynamically
+        st.write(f"""
+                This Process requires the following documents:
+                
+                SEAL has compiled the following documents for you to download:
+                
+                - ✅ Copy of Passport  
+                - ✅ Copy of Residence Permit (NIE/TIE)  
+                - ✅ EX-00 Form  
+                - ✅ Tax Form (Tasa-052)  
+                - ✅ Certificado de Aprovechamiento  
+                - ✅ Academic Transcript  
+                - {need} Health Insurance Form
+                - ✅ Copy of Health Insurance Card  
+                - ❌ Bank Statements  
+
+                **YOU NEED TO GET THE BANK STATEMENTS**
                 """)
-        with open("NIE_Renewal_Documents.zip", "rb") as file:
-                btn = st.download_button(
-                        label="Download",
-                        data=file,
-                        file_name="NIE_Renewal_Documents.zip",
-                        mime="application/zip"
-                )
+        
+        
+        if health_insurance_form == 1:
+                st.write("Click the button below to download your documents.")
+
+                with st.expander("Download Documents 📂"):
+        
+                        st.write("Your documents are ready for download.")
+                        with open("NIE_Renewal_Documents.zip", "rb") as file:
+                                st.download_button(
+                                label="📥 Download ZIP",
+                                data=file,
+                                file_name="NIE_Renewal_Documents.zip",
+                                mime="application/zip"
+                                )
+
+                
 elif process == 'Authorization to Return':
         st.write("You selected: Authorization to Return")
 elif process == 'City Hall Registration':
