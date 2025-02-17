@@ -1,7 +1,7 @@
 import streamlit as st
 
 # Set page configuration
-st.set_page_config(page_title="Find Document Process", page_icon="📄", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="Find Document Process", page_icon="./styles/seal_logo.png", layout="wide", initial_sidebar_state="expanded")
 
 # Custom CSS for styling
 st.markdown(
@@ -18,7 +18,7 @@ st.markdown(
 )
 
 # Page Title
-st.markdown("<h1 class='center-text'>📜 Find Your Document Process</h1>", unsafe_allow_html=True)
+st.markdown("<h1 class='center-text'>Find Your Document Process</h1>", unsafe_allow_html=True)
 st.markdown("<p class='center-text'>Select a process and get the required documents.</p>", unsafe_allow_html=True)
 
 st.markdown("<hr>", unsafe_allow_html=True)
@@ -58,23 +58,23 @@ elif process == "NIE Renewal":
     if uploaded_file:
         st.success(f"✅ {uploaded_file.name} uploaded successfully!")
     
-    # Document Checklist
-    st.markdown("### 📋 Required Documents")
-    checklist = {
-        " Copy of Passport": True,
-        " Copy of Residence Permit (NIE/TIE)": True,
-        " EX-00 Form": True,
-        " Tax Form (Tasa-052)": True,
-        " Certificado de Aprovechamiento": True,
-        " Academic Transcript": True,
-        " Health Insurance Form": bool(uploaded_file),
-        " Copy of Health Insurance Card": True,
-        " Bank Statements": False
-    }
+#     # Document Checklist
+#     st.markdown("### 📋 Required Documents")
+#     checklist = {
+#         # " Copy of Passport": True,
+#         # " Copy of Residence Permit (NIE/TIE)": True,
+#         # " EX-00 Form": True,
+#         # " Tax Form (Tasa-052)": True,
+#         # " Certificado de Aprovechamiento": True,
+#         # " Academic Transcript": True,
+#         " Health Insurance Form": bool(uploaded_file),
+#         # " Copy of Health Insurance Card": True,
+#         # " Bank Statements": False
+#     }
 
-    for item, completed in checklist.items():
-        status = "✅" if completed else "❌"
-        st.write(f"{status} {item}")
+#     for item, completed in checklist.items():
+#         status = "✅" if completed else "❌"
+#         st.write(f"{status} {item}")
 
     # Download Button
     if uploaded_file:
@@ -94,15 +94,6 @@ elif process == "Authorization to Return":
 elif process == "City Hall Registration":
     st.markdown("### 🏛 City Hall Registration")
     st.write("Follow the instructions to complete your registration.")
-
-st.markdown("<hr>", unsafe_allow_html=True)
-
-# Navigation Buttons
-col1, col2 = st.columns([1, 1])
-with col1:
-    st.button("🏠 Back to Home")
-with col2:
-    st.button("📂 Upload Another Document")
 
 # Sidebar Help
 with st.sidebar:
