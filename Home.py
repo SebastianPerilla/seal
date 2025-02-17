@@ -5,11 +5,12 @@ import base64
 
 st.set_page_config(page_title="Home", page_icon= r"styles\seal_logo.png", initial_sidebar_state="auto", layout="wide")
 
-# Construct the path dynamically
-image_path = os.path.join(os.path.dirname(__file__), "..", "styles", "dashboard.png")
 
-# Display the image
-st.image(image_path, use_container_width=True)
+# Open image manually
+image_path = "../styles/dashboard.png"
+with open(image_path, "rb") as img_file:
+    image = Image.open(img_file)
+    st.image(image, use_container_width=True)
 
 ## Tabs
 
