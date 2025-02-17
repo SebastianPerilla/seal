@@ -74,7 +74,8 @@ with tab1:
 # Tab 2: Upload Documents
 with tab2:
         
-        with st.container():
+       with st.container():
+                passport = 0  # Initial condition (passport not uploaded)
                 
                 # Add a subheader for the file uploader
                 st.subheader("Drag and Drop Your Documents Here")
@@ -82,29 +83,26 @@ with tab2:
                 # File uploader
                 uploaded_files = st.file_uploader("Upload from your computer", accept_multiple_files=True)
 
+                # Check if a file has been uploaded
                 if uploaded_files:
+                        passport = 1  # Update passport status
+                        st.success("✅ Passport uploaded successfully!")
+                        st.warning(" ID Card Scan is missing.")
                         for uploaded_file in uploaded_files:
                                 st.write(f"📂 Uploaded file: {uploaded_file.name}")
-
+                else:
+                        st.warning("📄 Passport Scan is missing.")
+                        st.warning(" ID Card Scan is missing.")
                 # ## Future Checklist of Documents Automatically Scanned and Checked for
                 # st.subheader("✅ Future Checklist of Documents")
+                
 
-                # Initialize session state for checkboxes if they don't exist
-                if "passport" not in st.session_state:
-                        st.session_state.passport = False
-                if "id_card" not in st.session_state:
-                        st.session_state.id_card = False
-                if "health_insurance" not in st.session_state:
-                        st.session_state.health_insurance = False
 
-                # Function to update session state when checkboxes change
-                def update_state(key):
-                        st.session_state[key] = not st.session_state[key]
 
                 # Create checkboxes with session state persistence
-                passport = st.checkbox("Passport", value=st.session_state.passport, on_change=update_state, args=("passport",))
-                id_card = st.checkbox("ID Card", value=st.session_state.id_card, on_change=update_state, args=("id_card",))
-                health_insurance = st.checkbox("Health Insurance Form", value=st.session_state.health_insurance, on_change=update_state, args=("health_insurance",))
+                # passport = st.checkbox("Passport", value=st.session_state.passport, on_change=update_state, args=("passport",))
+                # id_card = st.checkbox("ID Card", value=st.session_state.id_card, on_change=update_state, args=("id_card",))
+                # health_insurance = st.checkbox("Health Insurance Form", value=st.session_state.health_insurance, on_change=update_state, args=("health_insurance",))
 
                 ## Machine Learning part to detect which documents are filled in (Placeholder)
                 st.write("🔍 AI will scan documents and verify if they are correctly uploaded.")
@@ -112,6 +110,14 @@ with tab2:
 #     st.header("⚙️ Settings")
 #     st.write("Manage your preferences.")
 
+
+
+# Sidebar Help
+with st.sidebar:
+    st.markdown("💬 **Need Help?**")
+    st.write("Contact our support team for assistance.")
+    if st.button("Start Live Chat"):
+        st.warning("Live chat is coming soon!")
 
 
 

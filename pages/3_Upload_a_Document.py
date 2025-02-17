@@ -26,6 +26,15 @@ if uploaded_files:
 
 
 
+
+# Sidebar Help
+with st.sidebar:
+    st.markdown("💬 **Need Help?**")
+    st.write("Contact our support team for assistance.")
+    if st.button("Start Live Chat"):
+        st.warning("Live chat is coming soon!")
+
+
 ### Live Chat Icon
 
 # Inject custom CSS & HTML for a floating chat icon
