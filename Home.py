@@ -1,13 +1,15 @@
 import streamlit as st
 import json
 import base64
+from PIL import Image
 
 
-st.set_page_config(page_title="Home", page_icon= r"styles\seal_logo.png", initial_sidebar_state="auto", layout="wide")
+
+st.set_page_config(page_title="Home", page_icon= "styles/seal_logo.png", initial_sidebar_state="auto", layout="wide")
 
 
 # Open image manually
-image_path = "../styles/dashboard.png"
+image_path = "styles/dashboard.png"
 with open(image_path, "rb") as img_file:
     image = Image.open(img_file)
     st.image(image, use_container_width=True)
