@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
   return (
@@ -21,42 +22,42 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
       >
         &times;
       </button>
-      <a
-        href="#home"
+      <Link
+        to="/"
         onClick={() => setMenuOpen(false)}
         className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 ${
           menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
         }`}
       >
         Home
-      </a>
-      <a
-        href="#about"
+      </Link>
+      <Link
+        to="/about"
         onClick={() => setMenuOpen(false)}
         className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 ${
             menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
           }`}
       >
         About
-      </a>
-      <a
-        href="#products"
+      </Link>
+      <Link
+        to="/products"
         onClick={() => setMenuOpen(false)}
         className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 ${
             menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
           }`}
       >
         Products
-      </a>
-      <a
-        href="#contact"
+      </Link>
+      <Link
+        to="/contact"
         onClick={() => setMenuOpen(false)}
         className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 ${
             menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
           }`}
       >
         Contact
-      </a>
+      </Link>
     </div>
   );
 };

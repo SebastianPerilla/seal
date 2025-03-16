@@ -1,11 +1,23 @@
 import React from "react";
 
-export const Home = () => {
+const Home = () => {
   return (
     <section
-      id="#home"
-      className="min-h-screen flex items-center justify-center relative bg-[#121212]"
+      id="home"
+      className="min-h-screen flex items-center justify-center relative bg-black overflow-hidden"
     >
+      {/* Base starry background */}
+      <div className="absolute inset-0 bg-[radial-gradient(white_1px,transparent_1px)] [background-size:50px_50px] opacity-[0.15]" />
+
+      {/* Brighter, larger stars */}
+      <div className="absolute inset-0 bg-[radial-gradient(white_1px,transparent_2px)] [background-size:200px_200px] opacity-[0.25]" />
+
+      {/* Bottom glow */}
+      <div className="absolute bottom-[-50%] left-1/2 -translate-x-1/2 w-[70%] h-[90%] rounded-full bg-[radial-gradient(circle,rgba(105,208,229,0.45)_0%,transparent_60%)] blur-[100px]" />
+
+      {/* New Gradient Border Bar */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[70%] h-0.5 bg-gradient-to-r from-transparent via-[#8BA4FF] to-transparent"></div>
+
       <div className="text-center z-10 px-4 py-32">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-b from-[#DBDBDB] to-[#FFFFFF] bg-clip-text leading-right text-transparent">
           Fill Instantly. Store Securely.
@@ -16,10 +28,13 @@ export const Home = () => {
         </p>
         <div className="flex justify-center space-x-4">
           <a
-            href="#products"
-            className="bg-[#1a1a1a] text-white py-3 px-6 rounded-full font-medium transition relative overflow-hidden hover:-translate-y-0.5 border border-transparent hover:border-[#00C2FF] shadow-[0_0_0px_#00C2FF] hover:shadow-[0_0_15px_rgba(0,194,255,0.5)] duration-300"
+            href="/products"
+            className="inline-block px-8 py-3 rounded-full text-lg font-medium 
+                     bg-transparent border border-[#69D0E5] text-white
+                     hover:-translate-y-0.5 bg-[#69D0E5]/10 transition-all duration-300
+                     shadow-[0_0_20px_rgba(105,208,229,0.3)]"
           >
-            Try Seal Now
+            Try SEAL Now
           </a>
         </div>
       </div>
