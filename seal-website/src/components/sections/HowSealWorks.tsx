@@ -1,7 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import Mac24inc from "../../assets/images/iMac 24 inch.png";
-import IpadMini from "../../assets/images/iPad_Mini_2021.png";
-import MonitorXDR from "../../assets/images/Monitor XDR.png";
 
 const HowSealWorks = () => {
   const timelineRef = useRef<HTMLDivElement>(null);
@@ -65,7 +62,7 @@ const HowSealWorks = () => {
                 {/* First Image */}
                 <div className="flex items-center justify-center ">
                   <img
-                    src={Mac24inc}
+                    src="/assets/images/Imac_inch.png"
                     alt="iMac 24 inc"
                     className="w-full h-full object-cover"
                   />
@@ -95,7 +92,7 @@ const HowSealWorks = () => {
                 {/* Placeholder for mobile devices image */}
                 <div className="flex items-center justify-center">
                     <img
-                        src={IpadMini}
+                        src="/assets/images/iPad_Mini_2021.png"
                         alt="iPad Mini"
                         className="w-full-1/2 h-full object-cover"
                     />
@@ -111,7 +108,7 @@ const HowSealWorks = () => {
                 {/* Placeholder for mobile devices image */}
                 <div className="flex items-center justify-center">
                     <img
-                        src={MonitorXDR}
+                        src="/assets/images/Monitor XDR.png"
                         alt="Monitor XDR"
                         className="w-[150%] h-[150%] object-cover"
                     />

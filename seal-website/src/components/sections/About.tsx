@@ -1,9 +1,4 @@
 import React from "react";
-import lightningIcon from "@/assets/icons/bi_lightning-charge.png";
-import securityIcon from "@/assets/icons/fluent_vault-24-regular.png";
-import simplicityIcon from "@/assets/icons/Simplicity icon.png";
-import eliottImage from "@/assets/images/Eliott About Us.png";
-import sebastianImage from "@/assets/images/Sebastian_Perilla_About_Us.jpeg";
 
 
 const About = () => {
@@ -95,7 +90,7 @@ const About = () => {
               <div className="bg-[#121212] rounded-xl p-6 transition-all group">
                 <div className="flex justify-center">
                   <img
-                    src={lightningIcon}
+                    src="/assets/icons/lightning_icon.png"
                     alt="Lightning Icon"
                     className="w-12 h-12 mb-6"
                   />
@@ -112,7 +107,7 @@ const About = () => {
               <div className="bg-[#121212] rounded-xl p-6 transition-all group">
                 <div className="flex justify-center">
                   <img
-                    src={securityIcon}
+                    src="/assets/icons/vault_logo.png"
                     alt="Security Icon"
                     className="w-12 h-12 mb-6"
                   />
@@ -129,7 +124,7 @@ const About = () => {
               <div className="bg-[#121212] rounded-xl p-6 transition-all group">
                 <div className="flex justify-center">
                   <img
-                    src={simplicityIcon}
+                    src = "/assets/icons/simple_icon.png"
                     alt="Simplicity Icon"
                     className="w-12 h-12 mb-6"
                   />
@@ -156,7 +151,7 @@ const About = () => {
             <div className="flex flex-col items-center text-center">
               <div className="w-64 h-64 rounded-full overflow-hidden mb-8">
                 <img
-                  src={sebastianImage}
+                  src="/assets/images/Sebastian_Perilla_About_Us.jpeg"
                   alt="Sebastian Perilla"
                   className="w-full h-full object-cover"
                 />
@@ -172,7 +167,7 @@ const About = () => {
             <div className="flex flex-col items-center text-center">
               <div className="w-64 h-64 rounded-full overflow-hidden mb-8">
                 <img
-                  src={eliottImage}
+                  src="/assets/images/Eliott About Us.png"
                   alt="Eliott Lombard"
                   className="w-full h-full object-cover"
                 />

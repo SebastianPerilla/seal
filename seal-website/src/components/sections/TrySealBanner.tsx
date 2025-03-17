@@ -1,7 +1,9 @@
 import React from "react";
-import backgroundImage from "../../assets/images/trysealbackground.png";
 
 const TrySealBanner = () => {
+  // Define the background image URL
+  const backgroundImage = "/assets/images/trysealbackground.png"; // If stored in `public/`
+
   return (
     <section className="mx-auto p-3">
       <div 
@@ -40,7 +42,6 @@ const TrySealBanner = () => {
       <div className="mt-80">
         {/* Additional content can be added here */}
       </div>
-
     </section>
   );
 };
