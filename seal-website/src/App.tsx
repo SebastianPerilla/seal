@@ -12,7 +12,6 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Footer from "./components/Footer";
 import { AnimatePresence } from "framer-motion";
 import { AnimatedPage } from "./components/AnimatedPage";
-import Contacts from "./components/sections/Contacts";
 import Contact from "./components/sections/Contact";
 import HowSealWorks from "./components/sections/HowSealWorks";
 import Faq from "./components/sections/Faq";
@@ -69,13 +68,6 @@ function AppContent() {
               <AnimatedPage>
                 <>
                   <Products />
-                </>
-              </AnimatedPage>
-            } />
-            <Route path="/contacts" element={
-              <AnimatedPage>
-                <>
-                  <Contacts />
                 </>
               </AnimatedPage>
             } />

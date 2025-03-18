@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Logo */}
           <Link to="/" className="text-white">
-            <img src="public/assets/images/seal_logo.png" alt="SEAL Logo" className="h-8" />
+            <img src="/assets/images/seal_logo.png" alt="SEAL Logo" className="h-8" />
           </Link>
 
           {/* Social Links */}

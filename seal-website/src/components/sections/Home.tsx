@@ -19,7 +19,7 @@ const Home = () => {
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[70%] h-0.5 bg-gradient-to-r from-transparent via-[#8BA4FF] to-transparent"></div>
 
       <div className="text-center z-10 px-4 py-32">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-b from-[#DBDBDB] to-[#FFFFFF] bg-clip-text leading-right text-transparent">
+        <h1 className="text-7xl md:text-7xl font-bold mb-6 bg-gradient-to-b from-[#DBDBDB] to-[#FFFFFF] bg-clip-text leading-right text-transparent">
           Fill Instantly. Store Securely.
         </h1>
         <p className="text-gray-300 text-lg mb-8 max-w-lg mx-auto">

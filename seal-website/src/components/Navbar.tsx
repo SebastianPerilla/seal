@@ -13,7 +13,7 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center">
             <img
-              src="public/assets/images/seal_logo.png"
+              src="/assets/images/seal_logo.png"
               alt="SEAL Logo"
               className="h-8"
             />
