@@ -22,7 +22,7 @@ const Home = () => {
         <h1 className="text-7xl md:text-7xl font-bold mb-6 bg-gradient-to-b from-[#DBDBDB] to-[#FFFFFF] bg-clip-text leading-right text-transparent">
           Fill Instantly. Store Securely.
         </h1>
-        <p className="text-gray-300 text-lg mb-8 max-w-lg mx-auto">
+        <p className="text-gray-300 text-2xl mb-8 max-w-lg mx-auto">
           SEAL instantly autofills officials documents and securely stores your
           data.
         </p>

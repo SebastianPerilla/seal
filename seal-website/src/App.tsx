@@ -68,6 +68,7 @@ function AppContent() {
               <AnimatedPage>
                 <>
                   <Products />
+                  <TrySealBanner />
                 </>
               </AnimatedPage>
             } />
