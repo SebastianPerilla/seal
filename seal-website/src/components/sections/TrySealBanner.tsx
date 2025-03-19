@@ -6,6 +6,9 @@ const TrySealBanner = () => {
 
   return (
     <section className="mx-auto p-3">
+      <div className="mt-80">
+        {/* Additional content can be added here */}
+      </div>
       <div 
         className="relative rounded-2xl overflow-hidden border border-[#69D0E5]/30 max-w-6xl mx-auto"
         style={{
@@ -16,9 +19,10 @@ const TrySealBanner = () => {
         {/* Content container */}
         <div className="relative z-10 px-8 py-16">
           <h2 className="text-4xl font-bold mb-8">
-            Skip the Paperwork, Get{" "}
-            <span className="block mt-2">SEAL</span>
+            Skip the Paperwork,<br></br> Get {" "}
+            <span className="mt-2 bg-gradient-to-r from-[#8BA4FF] to-[#69D0E5] text-transparent bg-clip-text">SEAL</span>
           </h2>
+          
           
           <a
             href="/products"

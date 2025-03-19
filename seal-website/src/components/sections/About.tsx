@@ -18,7 +18,7 @@ const About = () => {
 
       <div className="max-w-3xl mx-auto px-4 flex flex-col items-center text-center z-10">
         <div className="flex flex-col items-center justify-center h-screen">
-          <h2 className="text-7xl font-bold mb-8 text-color-white">
+          <h2 className="text-7xl mb-8 text-color-white">
             One Click.{" "}
             <span className="bg-gradient-to-r from-[#8BA4FF] to-[#69D0E5] bg-clip-text text-transparent">
               Done.

@@ -18,10 +18,13 @@ const HowSealWorks = () => {
         Math.min(1, visibleHeight / rect.height)
       );
 
+      // Change the color at 50% height
+      const fillPercent = Math.max(0, Math.min(1, (visibleHeight - rect.height / 2) / (rect.height / 2)));
+
       element.style.background = `linear-gradient(
         to bottom,
-        #8BA4FF ${percentVisible * 100}%,
-        #69D0E5 ${percentVisible * 100}%
+        #8BA4FF ${fillPercent * 100}%,
+        #69D0E5 ${fillPercent * 100}%
       )`;
     };
 

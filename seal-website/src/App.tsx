@@ -16,7 +16,7 @@ import Contact from "./components/sections/Contact";
 import HowSealWorks from "./components/sections/HowSealWorks";
 import Faq from "./components/sections/Faq";
 import TrySealBanner from "./components/sections/TrySealBanner";
-
+import Pricing from "./components/sections/Pricing";
 
 function AppContent() {
   const [isLoaded, setIsLoaded] = useState(() => sessionStorage.getItem('isLoaded') === 'true');
@@ -76,6 +76,13 @@ function AppContent() {
               <AnimatedPage>
                 <>
                   <Contact />
+                </>
+              </AnimatedPage>
+            } />
+            <Route path="/pricing" element={
+              <AnimatedPage>
+                <>
+                  <Pricing />
                 </>
               </AnimatedPage>
             } />
