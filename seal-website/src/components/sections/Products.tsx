@@ -4,7 +4,7 @@ const Products = () => {
   return (
     <section
       id="products"
-      className="min-h-screen w-full flex items-center justify-center py-20 overflow-y-auto bg-[#0a0a0a]"
+      className="min-h-screen w-full flex items-center justify-center py-20 overflow-y-auto bg-black"
     >
       <div className="max-w-6xl mx-auto mt-30 px-4 flex flex-col items-center">
         <h2 className="text-7xl w-full mb-20">

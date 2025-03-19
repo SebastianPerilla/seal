@@ -1,139 +1,76 @@
 import React from "react";
-
+import FeatureItem from "../subcomponents/FeatureItem";
+import GetStarted from "../subcomponents/GetStarted";
 const Pricing = () => {
   return (
     <section
       id="pricing"
-      className="min-h-screen w-full flex items-center justify-center py-20 overflow-y-auto bg-color-black"
+      className="min-h-screen w-full flex items-center justify-center py-20 overflow-y-auto"
     >
       <div className="max-w-6xl mx-auto px-4 flex flex-col items-center">
         <h2 className="text-7xl mb-20 w-full">
-          <div className="flex flex-col items-start ">
-            <span className="text-white">Find the</span>
-            <div className="flex items-center mt-2">
-              <span className="text-white mr-4">perfect</span>
-              <span className="bg-gradient-to-r from-[#8BA4FF] to-[#69D0E5] bg-clip-text text-transparent">
-                plan
-              </span>
-            </div>
+          <div className="flex flex-col items-center text-white">
+            Find the perfect
+            <span className="bg-gradient-to-r from-[#8BA4FF] to-[#69D0E5] bg-clip-text text-transparent">
+              plan
+            </span>
           </div>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
           {/* Basic Plan */}
-          <div className="bg-[#121212] rounded-3xl p-8 transition-all group border border-[#4B4B4B]">
-            <div className="flex items-center mb-6">
+          <div className="rounded-3xl p-8 transition-all group relative overflow-hidden bg-gradient-to-tr from-[rgba(138,164,255,0.2)] via-[rgba(0,0,0,0.8)] to-[rgba(105,208,229,0.2)]">
+            <div className="flex items-center mb-6 relative z-10">
               <div className="w-8 h-8 rounded-full border border-[#69D0E5] flex items-center justify-center mr-3">
                 <span className="text-[#69D0E5] text-sm">B</span>
               </div>
               <h3 className="text-xl font-bold text-white">Basic</h3>
             </div>
-            <div className="mb-8">
+            <div className="mb-8 relative z-10">
               <p className="text-2xl font-bold text-white mb-1">Free</p>
-              <p className="text-gray-400">Best for Personal Use</p>
+              <p className="text-gray-400 text-sm">Best for Personal Use (Storage: 500MB, Document Processes: 1 per month)  </p>
             </div>
-            <button className="w-full py-3 px-6 rounded-xl border border-[#69D0E5] text-white hover:bg-[#69D0E5] hover:text-black transition-all mb-8">
-              Get Started
-            </button>
-            <div className="space-y-4">
+            <GetStarted />
+            <div className="space-y-4 relative z-10">
               <p className="text-gray-400 text-sm font-medium mb-2">
                 What you'll get:
               </p>
-              <div className="flex items-start">
-                <svg
-                  className="w-5 h-5 text-[#69D0E5] mr-3 mt-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 13l4 4L19 7"
-                  ></path>
-                </svg>
-                <p className="text-gray-400 text-sm">
-                  5 Free Documents Per Month
-                </p>
-              </div>
-              <div className="flex items-start">
-                <svg
-                  className="w-5 h-5 text-[#69D0E5] mr-3 mt-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 13l4 4L19 7"
-                  ></path>
-                </svg>
-                <p className="text-gray-400 text-sm">
-                  Unlimited Personal Profile
-                </p>
-              </div>
+              <FeatureItem text="3 Free Document Autofills per Month" />
+              <FeatureItem text="1 Document Process per Month" />
+              <FeatureItem text="Encrypted Document Vault" />
             </div>
           </div>
 
           {/* Standard Plan */}
-          <div className="bg-[#121212] rounded-3xl p-8 transition-all group border border-[#4B4B4B]">
+          <div className="rounded-3xl p-8 transition-all group relative z-10 bg-gradient-to-tr from-[rgba(105,208,229,0.2)] via-[rgba(0,0,0,0.8)] to-[rgba(138,164,255,0.2)]">
             <div className="flex items-center mb-6">
-              <div className="w-8 h-8 rounded-full border border-[#69D0E5] flex items-center justify-center mr-3">
+              <div className="w-8 h-8 rounded-full border border-[#69D0E5] flex items-center justify-center mr-3 ">
                 <span className="text-[#69D0E5] text-sm">S</span>
               </div>
               <h3 className="text-xl font-bold text-white">Standard</h3>
             </div>
             <div className="mb-8">
-              <p className="text-2xl font-bold text-white mb-1">10€</p>
-              <p className="text-gray-400">per month</p>
+              <p className="text-2xl font-bold text-white mb-1">
+                10€ / per month
+              </p>
+              <p className="text-gray-400 text-sm">
+                For Students, Expats, and Frequent Travellers Managing Docs
+              </p>
             </div>
-            <button className="w-full py-3 px-6 rounded-xl border border-[#69D0E5] text-white hover:bg-[#69D0E5] hover:text-black transition-all mb-8">
-              Get Started
-            </button>
+            <GetStarted />
             <div className="space-y-4">
               <p className="text-gray-400 text-sm font-medium mb-2">
                 What you'll get:
               </p>
-              <div className="flex items-start">
-                <svg
-                  className="w-5 h-5 text-[#69D0E5] mr-3 mt-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 13l4 4L19 7"
-                  ></path>
-                </svg>
-                <p className="text-gray-400 text-sm">Unlimited Documents</p>
-              </div>
-              <div className="flex items-start">
-                <svg
-                  className="w-5 h-5 text-[#69D0E5] mr-3 mt-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 13l4 4L19 7"
-                  ></path>
-                </svg>
-                <p className="text-gray-400 text-sm">Advanced Support</p>
-              </div>
+              <FeatureItem text="Unlimited AI Autofill" />
+              <FeatureItem text="Secure Vault with 500MB Storage" />
+              <FeatureItem text="Unlimited Document Processes" />
+              <FeatureItem text="Priority Support" />
             </div>
           </div>
 
           {/* Enterprise Plan */}
-          <div className="bg-[#121212] rounded-3xl p-8 transition-all group border border-[#4B4B4B]">
+          <div className="rounded-3xl p-8 transition-all group bg-gradient-to-tr from-[rgba(138,164,255,0.2)] via-[rgba(0,0,0,0.8)] to-[rgba(105,208,229,0.2)]">
             <div className="flex items-center mb-6">
               <div className="w-8 h-8 rounded-full border border-[#69D0E5] flex items-center justify-center mr-3">
                 <span className="text-[#69D0E5] text-sm">E</span>
@@ -142,51 +79,18 @@ const Pricing = () => {
             </div>
             <div className="mb-8">
               <p className="text-2xl font-bold text-white mb-1">Custom</p>
-              <p className="text-gray-400">Contact us</p>
+              <p className="text-gray-400 text-sm">
+                For Companies, Institutions, Universities, and Teams
+              </p>
             </div>
-            <button className="w-full py-3 px-6 rounded-xl border border-[#69D0E5] text-white hover:bg-[#69D0E5] hover:text-black transition-all mb-8">
-              Get Started
-            </button>
+            <GetStarted />
             <div className="space-y-4">
               <p className="text-gray-400 text-sm font-medium mb-2">
                 What you'll get:
               </p>
-              <div className="flex items-start">
-                <svg
-                  className="w-5 h-5 text-[#69D0E5] mr-3 mt-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 13l4 4L19 7"
-                  ></path>
-                </svg>
-                <p className="text-gray-400 text-sm">
-                  API Integration Available
-                </p>
-              </div>
-              <div className="flex items-start">
-                <svg
-                  className="w-5 h-5 text-[#69D0E5] mr-3 mt-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 13l4 4L19 7"
-                  ></path>
-                </svg>
-                <p className="text-gray-400 text-sm">
-                  Custom Workflows & Integration
-                </p>
-              </div>
+              <FeatureItem text="All Standard Features" />
+              <FeatureItem text="API Integration with Enterprise Software" />
+              <FeatureItem text="Custom Workflows & Compliance Tools" />
             </div>
           </div>
         </div>

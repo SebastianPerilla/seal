@@ -14,6 +14,14 @@ h1, h2 {
   font-family: "Clash", sans-serif;
 }
 
+.glow-effect {
+  box-shadow: 0 0 150px rgba(105, 208, 229, 0.9), 0 0 510px rgba(105, 208, 229, 0.9);
+}
+
+.backdrop-filter {
+  backdrop-filter: blur(100px);
+}
+
 
 @layer utilities {
   @keyframes blink {
