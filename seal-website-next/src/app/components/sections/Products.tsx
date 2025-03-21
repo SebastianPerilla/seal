@@ -3,13 +3,10 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { usePathname } from "next/navigation";
 
 const Products: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false); // Initialize without sessionStorage
-  const [menuOpen, setMenuOpen] = useState(false);
-  const pathname = usePathname();
-
+  
   // Move sessionStorage check to useEffect
   useEffect(() => {
     setIsLoaded(sessionStorage.getItem("isLoaded") === "true");

@@ -5,10 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 const About: React.FC = () => {
-  const secureStorage = ["SEAL Vault"];
-  const autofills = ["SEAL Autofill"];
-  const sealAPI = ["SEAL API"];
-
   return (
     <section
       id="about"

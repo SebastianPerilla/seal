@@ -1,7 +1,6 @@
 "use client"; // Required for hooks in Next.js
 
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 interface FaqItem {
   question: string;
