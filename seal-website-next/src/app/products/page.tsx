@@ -38,7 +38,7 @@ const Products: React.FC = () => {
               SEAL Autofill
             </h3>
             <p className="text-gray-400 text-lg">
-              No more typing the same details over and over. SEAL fills out your forms instantly, so you don't have to.
+              No more typing the same details over and over. SEAL fills out your forms instantly, so you don&apos;t have to.
             </p>
           </div>
 
@@ -95,7 +95,7 @@ const Products: React.FC = () => {
               SEAL API
             </h3>
             <p className="text-gray-400 text-lg">
-              Integrate SEAL's powerful features into your own applications.
+              Integrate SEAL&apos;s powerful features into your own applications.
             </p>
           </div>
         </div>

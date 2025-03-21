@@ -1,6 +1,7 @@
 "use client"; // Required for hooks in Next.js
 
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 
 interface FaqItem {
   question: string;

@@ -36,7 +36,7 @@ const Pricing: React.FC = () => {
             <GetStarted />
             <div className="space-y-3 sm:space-y-4 relative z-10">
               <p className="text-gray-400 text-xs sm:text-sm font-medium mb-2">
-                What you'll get:
+                What you&apos;ll get:
               </p>
               <FeatureItem text="3 Free Document Autofills per Month" />
               <FeatureItem text="1 Document Process per Month" />
@@ -59,7 +59,7 @@ const Pricing: React.FC = () => {
             <GetStarted />
             <div className="space-y-3 sm:space-y-4">
               <p className="text-gray-400 text-xs sm:text-sm font-medium mb-2">
-                What you'll get:
+                What you&apos;ll get:
               </p>
               <FeatureItem text="Unlimited Document Autofills" />
               <FeatureItem text="50 Document Processes per Month" />
@@ -83,7 +83,7 @@ const Pricing: React.FC = () => {
             <GetStarted />
             <div className="space-y-3 sm:space-y-4 relative z-10">
               <p className="text-gray-400 text-xs sm:text-sm font-medium mb-2">
-                What you'll get:
+                What you&apos;ll get:
               </p>
               <FeatureItem text="Everything in Standard" />
               <FeatureItem text="Unlimited Storage" />

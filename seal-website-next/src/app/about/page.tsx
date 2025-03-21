@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const About: React.FC = () => {
+
   return (
     <section
       id="about"

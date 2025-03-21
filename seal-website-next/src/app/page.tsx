@@ -5,9 +5,7 @@ import Link from "next/link";
 import HowSealWorks from "@/app/components/sections/HowSealWorks";
 import Faq from "@/app/components/sections/Faq";
 import TrySealBanner from "@/app/components/sections/TrySealBanner";
-import Contact from "@/app/contact/page";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 
 const Home: React.FC = () => {
   return (
