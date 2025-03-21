@@ -1,8 +1,6 @@
 {
-  "buildCommand": "next build",
-  "outputDirectory": "dist",
   "framework": "nextjs",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
-  ]
+  "buildCommand": "next build",
+  "outputDirectory": ".next",
+  "regions": ["iad1"]
 } 

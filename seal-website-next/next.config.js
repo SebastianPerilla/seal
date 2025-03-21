@@ -7,10 +7,10 @@ const nextConfig = {
         hostname: '**',
       },
     ],
+    unoptimized: true, // Required for static export
   },
-  output: 'export',  // This will generate static files
-  distDir: 'dist',   // This will output to the dist directory
-  // Add any other configuration options here
+  output: 'standalone', // Changed from 'export' to 'standalone'
+  // Remove distDir as it's not needed with standalone output
 }
 
 module.exports = nextConfig 
