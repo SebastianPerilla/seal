@@ -148,7 +148,7 @@ const About: React.FC = () => {
               <h3 className="text-3xl font-bold mb-4">Eliott Lombard</h3>
               <h4 className="text-2xl font-bold mb-4">CEO</h4>
               <p className="text-gray-300 text-lg leading-relaxed">
-                Drives SEAL's vision, <br></br>ensuring everything runs{" "}
+                Drives SEAL&apos;s vision, <br></br>ensuring everything runs{" "}
                 <br></br>smoothly and grows successfully.
               </p>
             </div>
@@ -167,7 +167,7 @@ const About: React.FC = () => {
               <h3 className="text-3xl font-bold mb-4">Sebastian Perilla</h3>
               <h4 className="text-2xl font-bold mb-4">CTO</h4>
               <p className="text-gray-300 text-lg leading-relaxed">
-                Turns big ideas into reality, leading the tech behind SEAL's AI
+                Turns big ideas into reality, leading the tech behind SEAL&apos;s AI
                 and machine learning technologies.
               </p>
             </div>

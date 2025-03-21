@@ -33,7 +33,7 @@ const Contact: React.FC = () => {
           Contact Us
         </h2>
         <p className="text-gray-400 text-lg mb-12 text-center max-w-2xl">
-          Have questions about SEAL? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+          Have questions about SEAL? We&apos;d love to hear from you. Send us a message and we&apos;ll respond as soon as possible.
         </p>
         
         <form onSubmit={handleSubmit} className="w-full max-w-2xl space-y-6">
