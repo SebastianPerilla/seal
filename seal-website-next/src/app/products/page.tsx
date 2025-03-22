@@ -84,7 +84,7 @@ const Products: React.FC = () => {
           <div className="bg-[#121212] rounded-3xl p-8 transition-all group border-2 border-[#1a1a1a] hover:border-[#69D0E5]">
             <div className="flex justify-start mb-6">
               <Image
-                src="/assets/icons/api_icon.png"
+                src="/assets/icons/building_icon.png"
                 alt="API Icon"
                 width={64}
                 height={64}
