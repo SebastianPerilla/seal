@@ -17,9 +17,9 @@ const About: React.FC = () => {
       {/* Brighter, larger stars */}
       <div className="absolute inset-0 bg-[radial-gradient(white_1px,transparent_2px)] [background-size:200px_200px] opacity-[0.25] z-0" />
 
-      <div className="max-w-3xl mx-auto px-4 flex flex-col items-center text-center z-10">
-        <div className="flex flex-col items-center justify-center h-screen">
-          <h2 className="text-7xl mb-8 text-color-white">
+      <div className="max-w-3xl mx-auto px-4 flex flex-col items-center text-center z-10 space-y-32">
+        <div className="flex flex-col items-center justify-center min-h-screen">
+          <h2 className="text-7xl mb-12 text-color-white">
             One Click.{" "}
             <span className="bg-gradient-to-r from-[#8BA4FF] to-[#69D0E5] bg-clip-text text-transparent">
               Done.
@@ -34,15 +34,16 @@ const About: React.FC = () => {
             className="inline-block px-8 py-3 rounded-full text-lg font-medium 
                      bg-transparent border border-[#69D0E5] text-white
                      hover:-translate-y-0.5 bg-[#69D0E5]/10 transition-all duration-300
-                     shadow-[0_0_20px_rgba(105,208,229,0.3)]"
+                     shadow-[0_0_20px_rgba(105,208,229,0.3)]
+                     mt-8"
           >
             Try SEAL Now
           </Link>
         </div>
 
         {/* Mission Statement */}
-        <div className="mt-70 text-center">
-          <h2 className="text-4xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-[#8BA4FF] to-[#69D0E5] bg-clip-text text-transparent leading-tight">
+        <div className="text-center">
+          <h2 className="text-4xl md:text-4xl font-bold bg-gradient-to-r from-[#8BA4FF] to-[#69D0E5] bg-clip-text text-transparent leading-tight">
             At SEAL, we believe paperwork should be effortless. Our goal is to
             eliminate repetitive form-filling by securely storing your personal
             information and instantly autofilling documents.
@@ -50,20 +51,20 @@ const About: React.FC = () => {
         </div>
 
         {/* Values Section */}
-        <div className="mt-50 w-full">
-          <h2 className="text-5xl font-bold text-center mb-8 text-color-white">
+        <div className="w-full">
+          <h2 className="text-5xl font-bold text-center mb-5 text-color-white">
             Our{" "}
             <span className="bg-gradient-to-r from-[#8BA4FF] to-[#69D0E5] bg-clip-text text-transparent">
               Values
             </span>
           </h2>
-          <p className="text-xl text-gray-300 text-center mb-16">
+          <p className="text-xl text-gray-300 text-center">
             Our core values guide everything we do, ensuring a seamless
             experience for individuals and businesses alike.
           </p>
 
-          <div className="glass rounded-xl p-8 border-[#FFFFFF] duration-300 bg-transparent">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="glass rounded-xl p-12 border-[#FFFFFF] duration-300 bg-transparent">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {/* Efficiency Card */}
               <div className="bg-[#121212] border border-[#69D0E5] rounded-xl p-6 transition-all group shadow-[0_0_10px_#69D0E5]">
                 <div className="flex justify-center">
@@ -125,15 +126,15 @@ const About: React.FC = () => {
         </div>
 
         {/* Team Section */}
-        <div className="mt-50 w-full">
-          <h2 className="text-5xl font-bold text-center mb-16 text-color-white">
+        <div className="w-full mt-40 mb-32">
+          <h2 className="text-5xl font-bold text-center mb-20 text-color-white">
             Meet the{" "}
             <span className="bg-gradient-to-r from-[#8BA4FF] to-[#69D0E5] bg-clip-text text-transparent">
               Team
             </span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-20 max-w-4xl mx-auto">
             {/* Eliott Card */}
             <div className="flex flex-col items-center text-center">
               <div className="w-64 h-64 rounded-full overflow-hidden mb-8">
