@@ -42,16 +42,17 @@ const About: React.FC = () => {
         </div>
 
         {/* Mission Statement */}
-        <div className="text-center">
+        <div className="text-center max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-4xl font-bold bg-gradient-to-r from-[#8BA4FF] to-[#69D0E5] bg-clip-text text-transparent leading-tight">
             At SEAL, we believe paperwork should be effortless. Our goal is to
             eliminate repetitive form-filling by securely storing your personal
             information and instantly autofilling documents.
           </h2>
         </div>
+        
 
         {/* Values Section */}
-        <div className="w-full">
+        <div className="w-full max-w-3xl">
           <h2 className="text-5xl font-bold text-center mb-5 text-color-white">
             Our{" "}
             <span className="bg-gradient-to-r from-[#8BA4FF] to-[#69D0E5] bg-clip-text text-transparent">
@@ -124,9 +125,10 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
+        <div className="w-full mt-200"></div>
 
         {/* Team Section */}
-        <div className="w-full mt-40 mb-32">
+        <div className="w-full mt-80 mb-32">
           <h2 className="text-5xl font-bold text-center mb-20 text-color-white">
             Meet the{" "}
             <span className="bg-gradient-to-r from-[#8BA4FF] to-[#69D0E5] bg-clip-text text-transparent">
