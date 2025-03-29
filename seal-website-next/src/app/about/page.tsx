@@ -49,7 +49,7 @@ const About: React.FC = () => {
             information and instantly autofilling documents.
           </h2>
         </div>
-        <div className="w-full mt-200"></div>
+        
 
         {/* Values Section */}
         <div className="w-full max-w-3xl">
