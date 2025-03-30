@@ -9,7 +9,7 @@
 - PostgreSQL + JSONB Support
 - Node.js
 - REST API
-
+- Supabase for database support
 ## Libraries:
 - Tesseract OCR
 - Hugging Face Passport Information Models
