@@ -1,9 +1,7 @@
 "use client"; // Required for hooks in Next.js
 
 import React from "react";
-import Link from "next/link";
 import dynamic from 'next/dynamic';
-import { motion } from "framer-motion";
 import Hero from '@/app/components/sections/Hero';
 
 // Dynamically import components that are below the fold
