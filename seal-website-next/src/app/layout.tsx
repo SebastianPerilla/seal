@@ -12,23 +12,7 @@ export const metadata: Metadata = {
   title: 'SEAL - Fill Instantly. Store Securely.',
   description: 'SEAL instantly autofills official documents and securely stores your data.',
   icons: {
-    icon: [
-      {
-        url: '/assets/images/seal_logo.png',
-        sizes: '32x32',
-        type: 'image/png',
-      },
-      {
-        url: '/assets/images/seal_logo.png',
-        sizes: '16x16',
-        type: 'image/png',
-      },
-    ],
-    apple: {
-      url: '/assets/images/seal_logo.png',
-      sizes: '180x180',
-      type: 'image/png',
-    },
+    icon: '/seal_logo.ico',
   },
 };
 
