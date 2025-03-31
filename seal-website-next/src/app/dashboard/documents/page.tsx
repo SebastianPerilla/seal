@@ -10,7 +10,7 @@ interface DocumentSection {
   title: string;
   description: string;
   icon: React.ReactNode;
-  jsonStructure: any;
+  jsonStructure: Record<string, unknown>;
 }
 
 const documentSections: DocumentSection[] = [
@@ -82,14 +82,13 @@ const documentSections: DocumentSection[] = [
 ];
 
 export default function Documents() {
-  const [selectedSection, setSelectedSection] = useState<DocumentType | null>(null);
   const [uploadedFiles, setUploadedFiles] = useState<Record<DocumentType, File | null>>({
     passport: null,
     general_info: null,
     id_card: null,
     driving_license: null
   });
-  const [extractedData, setExtractedData] = useState<Record<DocumentType, any>>({
+  const [extractedData, setExtractedData] = useState<Record<DocumentType, Record<string, unknown> | null>>({
     passport: null,
     general_info: null,
     id_card: null,
@@ -131,7 +130,6 @@ export default function Documents() {
             animate={{ opacity: 1, y: 0 }}
             className="bg-[#121212] border border-[#69D0E5]/20 rounded-xl p-3 sm:p-6 hover:border-[#69D0E5]/50 
                      transition-all cursor-pointer"
-            onClick={() => setSelectedSection(section.type)}
           >
             <div className="flex items-center space-x-3 sm:space-x-4 mb-3 sm:mb-4">
               <div className="w-9 sm:w-12 h-9 sm:h-12 rounded-lg bg-[#69D0E5]/10 flex items-center justify-center text-[#69D0E5]">

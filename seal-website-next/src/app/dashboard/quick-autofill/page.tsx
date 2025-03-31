@@ -78,7 +78,7 @@ export default function QuickAutofill() {
         animate={{ opacity: 1, y: 0 }}
         className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"
       >
-        {documentTypes.map((type, index) => (
+        {documentTypes.map((type) => (
           <button
             key={type.name}
             className="p-6 rounded-xl border border-[#69D0E5]/20 bg-[#121212] hover:border-[#69D0E5]/50 
