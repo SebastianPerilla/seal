@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import router from 'next/router';
+import Image from 'next/image';
 
 export default function DashboardLayout({
   children,
@@ -92,7 +92,7 @@ export default function DashboardLayout({
       <div className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-[#121212] border-b border-[#69D0E5]/10 px-4 py-3">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
-            <img src="/assets/images/seal_logo.png" alt="SEAL Logo" className="w-8 h-8"/>
+            <Image src="/assets/images/seal_logo.png" alt="SEAL Logo" className="w-8 h-8"/>
           </Link>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
@@ -126,7 +126,7 @@ export default function DashboardLayout({
         {/* Logo and Navigation */}
         <div className="flex-1 mt-4 lg:mt-0">
           <Link href="/" className="hidden lg:flex items-center mb-8">
-            <img src="/assets/images/seal_logo.png" alt="SEAL Logo" className="w-8 h-8"/>
+            <Image src="/assets/images/seal_logo.png" alt="SEAL Logo" className="w-8 h-8"/>
           </Link>
 
           <ul className="space-y-1">
