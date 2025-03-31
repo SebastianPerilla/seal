@@ -83,7 +83,7 @@ const Navbar: React.FC<NavbarProps> = ({ menuOpen, setMenuOpen }) => {
               Contact
             </Link>
             <Link
-              href="/products"
+              href="/login"
               className="px-5 py-2 rounded-full text-sm font-medium 
                        bg-transparent border-2 border-[#69D0E5] text-white
                        hover:bg-[#69D0E5]/10 transition-all duration-300
