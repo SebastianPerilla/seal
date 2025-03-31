@@ -2,12 +2,23 @@
 
 import React from "react";
 import Link from "next/link";
-import HowSealWorks from "@/app/components/sections/HowSealWorks";
-import Faq from "@/app/components/sections/Faq";
-import TrySealBanner from "@/app/components/sections/TrySealBanner";
+import dynamic from 'next/dynamic';
 import { motion } from "framer-motion";
 
-const Home: React.FC = () => {
+// Dynamically import heavy components
+const HowSealWorks = dynamic(() => import("@/app/components/sections/HowSealWorks"), {
+  ssr: true, // Enable SSR since this component is visible above the fold
+});
+
+const Faq = dynamic(() => import("@/app/components/sections/Faq"), {
+  ssr: false, // Disable SSR since this component is below the fold
+});
+
+const TrySealBanner = dynamic(() => import("@/app/components/sections/TrySealBanner"), {
+  ssr: false, // Disable SSR since this component is below the fold
+});
+
+export default function Home() {
   return (
     <main className="bg-black">
       {/* Hero Section */}
@@ -74,6 +85,4 @@ const Home: React.FC = () => {
       <TrySealBanner />
     </main>
   );
-};
-
-export default Home;
+}

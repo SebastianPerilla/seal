@@ -10,24 +10,32 @@ import MobileMenu from "@/app/components/MobileMenu";
 import Footer from "@/app/components/Footer";
 
 export default function ClientWrapper({ children }: { children: React.ReactNode }) {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState<boolean | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
+    // Check sessionStorage only after component mounts
     const alreadyLoaded = sessionStorage.getItem("isLoaded") === "true";
     setIsLoaded(alreadyLoaded);
   }, []);
 
   useEffect(() => {
-    if (isLoaded) {
-      sessionStorage.setItem("isLoaded", "true");
+    if (isLoaded !== null) { // Only update when state has been initialized
+      sessionStorage.setItem("isLoaded", String(isLoaded));
     }
   }, [isLoaded]);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if (typeof window !== 'undefined') {
+      window.scrollTo(0, 0);
+    }
   }, [pathname]);
+
+  // Don't render anything until we've checked sessionStorage
+  if (isLoaded === null) {
+    return null;
+  }
 
   return (
     <>
