@@ -8,6 +8,7 @@ import { LoadingScreen } from "@/app/components/LoadingScreen";
 import Navbar from "@/app/components/Navbar";
 import MobileMenu from "@/app/components/MobileMenu";
 import Footer from "@/app/components/Footer";
+import DashboardLayout from "@/app/dashboard/layout";
 
 export default function ClientWrapper({ children }: { children: React.ReactNode }) {
   const [isLoaded, setIsLoaded] = useState<boolean | null>(null);
@@ -37,14 +38,23 @@ export default function ClientWrapper({ children }: { children: React.ReactNode 
     return null;
   }
 
+  // Check if we're in the dashboard
+  const isDashboard = pathname?.startsWith('/dashboard');
+
   return (
     <>
       {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
       <div className={`min-h-screen w-full transition-opacity duration-700 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
-        <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-        <AnimatePresence mode="wait">{children}</AnimatePresence>
-        <Footer />
+        {isDashboard ? (
+          <DashboardLayout>{children}</DashboardLayout>
+        ) : (
+          <>
+            <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+            <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+            <AnimatePresence mode="wait">{children}</AnimatePresence>
+            <Footer />
+          </>
+        )}
       </div>
     </>
   );

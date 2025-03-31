@@ -11,7 +11,7 @@ const GetStarted: React.FC<GetStartedProps> = ({ className = '' }) => {
   return (
     <div className={className}>
       <Link
-        href="/products"
+        href="/login"
         className="w-full py-3 px-6 mb-6 rounded-xl border-2 border-[#69D0E5] text-white 
                  hover:bg-[#69D0E5]/10 transition-all duration-300
                  shadow-[0_0_20px_rgba(105,208,229,0.3)] flex items-center justify-center"

@@ -40,13 +40,13 @@ export default function Hero() {
           className="flex justify-center space-x-4"
         >
           <Link
-            href="/products"
+            href="/login"
             className="inline-block px-6 sm:px-8 py-2.5 sm:py-3 rounded-full text-base sm:text-lg font-medium 
                      bg-transparent border-2 border-[#69D0E5] text-white
                      hover:-translate-y-0.5 bg-[#69D0E5]/10 transition-all duration-300
                      shadow-[0_0_20px_rgba(105,208,229,0.3)]"
           >
-            Try SEAL Now
+            Get Started
           </Link>
         </motion.div>
       </div>
