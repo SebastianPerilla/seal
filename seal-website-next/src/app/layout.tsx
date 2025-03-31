@@ -1,14 +1,18 @@
 // NO "use client" here - this is correct!
 import "@/app/globals.css";
-import { Metadata } from 'next';
+import { Metadata, Viewport } from 'next';
 import ClientWrapper from "./components/ClientWrapper";
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
 
 export const metadata: Metadata = {
   title: 'SEAL - Fill Instantly. Store Securely.',
   description: 'SEAL instantly autofills official documents and securely stores your data.',
-  viewport: 'width=device-width, initial-scale=1',
   icons: {
-    icon: '/favicon.ico',
+    icon: '/seal_logo.ico',
   },
 };
 
