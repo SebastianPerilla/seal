@@ -16,11 +16,11 @@ type UserProfile = {
 };
 
 const mockProfile: UserProfile = {
-  name: 'John Doe',
-  email: 'john.doe@example.com',
-  role: 'Product Manager',
-  company: 'Acme Inc.',
-  plan: 'Pro',
+  name: 'Sebastian Perilla',
+  email: 'sebastianperilla@gmail.com',
+  role: 'Student',
+  company: 'IE University',
+  plan: 'Free',
   usage: {
     documents: 145,
     storage: '2.3 GB'
