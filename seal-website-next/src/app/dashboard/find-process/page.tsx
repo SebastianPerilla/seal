@@ -36,6 +36,18 @@ const processCategories = [
 export default function FindProcess() {
   const [searchQuery, setSearchQuery] = useState('');
 
+  const handleProcessClick = (process: string) => {
+    if (process === 'Visa Application') {
+      // Create a temporary anchor element
+      const link = document.createElement('a');
+      link.href = '/files/Visa_Application.zip';
+      link.download = 'Visa_Application.zip';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  };
+
   return (
     <div className="px-6 py-24">
       {/* Header */}
@@ -99,7 +111,10 @@ export default function FindProcess() {
             <ul className="space-y-3">
               {category.processes.map((process) => (
                 <li key={process}>
-                  <button className="w-full text-left px-4 py-3 rounded-lg text-gray-400 hover:text-white hover:bg-[#69D0E5]/10 transition-colors">
+                  <button 
+                    onClick={() => handleProcessClick(process)}
+                    className="w-full text-left px-4 py-3 rounded-lg text-gray-400 hover:text-white hover:bg-[#69D0E5]/10 transition-colors"
+                  >
                     {process}
                   </button>
                 </li>
