@@ -1,7 +1,7 @@
 # SEAL
 
 # Frontend
-- Next.js
+- Next.js (App Router)
 - React
 - HTML + CSS (Tailwind)
 
