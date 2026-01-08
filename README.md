@@ -11,7 +11,7 @@
 - REST API
 - Supabase for database support
 ## Libraries:
-- Tesseract OCR
+- Tesseract OCR for detection
 - Hugging Face Passport Information Models
 - [PDF Document Layout Analysis](https://github.com/huridocs/pdf-document-layout-analysis) 
 
